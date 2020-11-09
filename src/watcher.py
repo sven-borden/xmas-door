@@ -12,7 +12,7 @@ mixer.init()
 sounds = {
     "doorbell": "src/sounds/Christmas-doorbell-melody.wav",
     "tannenbaum": "src/sounds/christmas-music-box-tannenbaum.wav",
-    "rock": "src/sounds/xmas-rock"
+    "rock": "src/sounds/xmas-rock.wav"
 }
 
 
