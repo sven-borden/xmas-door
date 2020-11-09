@@ -11,11 +11,11 @@ mixer.init()
 
 
 sounds = {
-    "doorbell": "sounds/Christmas-doorbell-melody.mp3",
-    "doorbell": "sounds/Christmas-doorbell-melody.mp3",
-    "doorbell": "sounds/Christmas-doorbell-melody.mp3",
-    "doorbell": "sounds/Christmas-doorbell-melody.mp3",
-    "doorbell": "sounds/Christmas-doorbell-melody.mp3"
+    "doorbell": "src/sounds/Christmas-doorbell-melody.mp3",
+    "doorbell": "src/sounds/Christmas-doorbell-melody.mp3",
+    "doorbell": "src/sounds/Christmas-doorbell-melody.mp3",
+    "doorbell": "src/sounds/Christmas-doorbell-melody.mp3",
+    "doorbell": "src/sounds/Christmas-doorbell-melody.mp3"
 }
 
 
@@ -44,7 +44,7 @@ def someone_crossed():
     """
     Callback when someone entered or went out and was detected
     """
-    play_sound(random.choice(list(sounds.items())))
+    play_sound(random.choice(list(sounds.values())))
 
 
 def start_watch():
