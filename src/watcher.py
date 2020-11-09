@@ -9,13 +9,10 @@ from pygame import mixer
 pir = MotionSensor(4)
 mixer.init()
 
-
 sounds = {
     "doorbell": "src/sounds/Christmas-doorbell-melody.wav",
-    "doorbell": "src/sounds/Christmas-doorbell-melody.wav",
-    "doorbell": "src/sounds/Christmas-doorbell-melody.wav",
-    "doorbell": "src/sounds/Christmas-doorbell-melody.wav",
-    "doorbell": "src/sounds/Christmas-doorbell-melody.wav"
+    "tannenbaum": "src/sounds/christmas-music-box-tannenbaum.wav",
+    "rock": "src/sounds/xmas-rock"
 }
 
 
@@ -32,6 +29,8 @@ def play_sound(path, absolut_path='/home/pi/xmas-door/'):
     ------
     On pygame error raise SystemExit
     """
+    if pygame.mixer.get_busy():
+        return
     sound = mixer.Sound(os.path.join(absolut_path, path))
     sound.set_volume(1.0)
     try:
