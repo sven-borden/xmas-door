@@ -11,11 +11,11 @@ mixer.init()
 
 
 sounds = {
-    "doorbell": "src/sounds/Christmas-doorbell-melody.mp3",
-    "doorbell": "src/sounds/Christmas-doorbell-melody.mp3",
-    "doorbell": "src/sounds/Christmas-doorbell-melody.mp3",
-    "doorbell": "src/sounds/Christmas-doorbell-melody.mp3",
-    "doorbell": "src/sounds/Christmas-doorbell-melody.mp3"
+    "doorbell": "src/sounds/Christmas-doorbell-melody.wav",
+    "doorbell": "src/sounds/Christmas-doorbell-melody.wav",
+    "doorbell": "src/sounds/Christmas-doorbell-melody.wav",
+    "doorbell": "src/sounds/Christmas-doorbell-melody.wav",
+    "doorbell": "src/sounds/Christmas-doorbell-melody.wav"
 }
 
 
@@ -33,7 +33,7 @@ def play_sound(path, absolut_path='/home/pi/xmas-door/'):
     On pygame error raise SystemExit
     """
     sound = mixer.Sound(os.path.join(absolut_path, path))
-
+    sound.set_volume(1.0)
     try:
         sound.play()
     except pygame.error as message:
