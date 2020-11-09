@@ -12,7 +12,7 @@ def start_watch():
     Infinite loop that waits for the PIR to trigger.
     Once triggered, call a sound.
     """
-    pir.when_motion = trigger()
+    pir.when_motion = trigger
 
 
 if __name__ == "__main__":
